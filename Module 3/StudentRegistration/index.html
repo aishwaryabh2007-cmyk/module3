@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration System</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+
+            <span class="navbar-brand mb-0 h1">
+                <i class="bi bi-mortarboard-fill"></i>
+                Student Registration System
+            </span>
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <div class="container py-5">
+
+        <!-- =========================
+             REGISTRATION FORM CARD
+        ========================== -->
+
+        <div class="registration-card">
+
+            <!-- Header -->
+
+            <div class="form-header">
+
+                <div class="icon-circle">
+                    <i class="bi bi-person-plus-fill"></i>
+                </div>
+
+                <h2>Student Registration</h2>
+
+                <p>
+                    Register a new student by entering the details below
+                </p>
+
+            </div>
+
+
+            <!-- Form Body -->
+
+            <div class="form-body">
+
+                <form id="studentForm">
+
+                    <!-- =========================
+                         STUDENT INFORMATION
+                    ========================== -->
+
+                    <h5 class="section-title">
+                        <i class="bi bi-person-badge"></i>
+                        Student Information
+                    </h5>
+
+                    <div class="row g-3">
+
+                        <!-- Student ID -->
+
+                        <div class="col-md-6">
+
+                            <label for="studentId" class="form-label">
+                                Student ID <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                class="form-control"
+                                placeholder="Example: STU2026001">
+
+                            <small
+                                id="studentIdError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Date of Birth -->
+
+                        <div class="col-md-6">
+
+                            <label for="dob" class="form-label">
+                                Date of Birth <span>*</span>
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dob"
+                                class="form-control">
+
+                            <small
+                                id="dobError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- First Name -->
+
+                        <div class="col-md-6">
+
+                            <label for="firstName" class="form-label">
+                                First Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                class="form-control"
+                                placeholder="Enter first name">
+
+                            <small
+                                id="firstNameError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Last Name -->
+
+                        <div class="col-md-6">
+
+                            <label for="lastName" class="form-label">
+                                Last Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                class="form-control"
+                                placeholder="Enter last name">
+
+                            <small
+                                id="lastNameError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Gender -->
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Gender <span>*</span>
+                            </label>
+
+                            <div class="gender-box">
+
+                                <div class="form-check form-check-inline">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="gender"
+                                        value="Male"
+                                        id="male">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="male">
+                                        Male
+                                    </label>
+
+                                </div>
+
+
+                                <div class="form-check form-check-inline">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="gender"
+                                        value="Female"
+                                        id="female">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="female">
+                                        Female
+                                    </label>
+
+                                </div>
+
+
+                                <div class="form-check form-check-inline">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="gender"
+                                        value="Other"
+                                        id="other">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="other">
+                                        Other
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                            <small
+                                id="genderError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Photo -->
+
+                        <div class="col-md-6">
+
+                            <label for="photo" class="form-label">
+                                Profile Photo
+                            </label>
+
+                            <input
+                                type="file"
+                                id="photo"
+                                class="form-control"
+                                accept="image/*">
+
+                            <small class="text-muted">
+                                JPG, PNG or JPEG
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         CONTACT INFORMATION
+                    ========================== -->
+
+                    <h5 class="section-title mt-5">
+
+                        <i class="bi bi-telephone"></i>
+
+                        Contact Information
+
+                    </h5>
+
+
+                    <div class="row g-3">
+
+                        <!-- Email -->
+
+                        <div class="col-md-6">
+
+                            <label for="email" class="form-label">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="example@gmail.com">
+
+                            </div>
+
+                            <small
+                                id="emailError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="col-md-6">
+
+                            <label for="phone" class="form-label">
+                                Phone Number <span>*</span>
+                            </label>
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+                                    +91
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="phone"
+                                    class="form-control"
+                                    placeholder="10 digit mobile number"
+                                    maxlength="10">
+
+                            </div>
+
+                            <small
+                                id="phoneError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         ACADEMIC INFORMATION
+                    ========================== -->
+
+                    <h5 class="section-title mt-5">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                        Academic Information
+
+                    </h5>
+
+
+                    <div class="row g-3">
+
+                        <!-- Course -->
+
+                        <div class="col-md-4">
+
+                            <label for="course" class="form-label">
+                                Course <span>*</span>
+                            </label>
+
+                            <select
+                                id="course"
+                                class="form-select">
+
+                                <option value="">
+                                    Select Course
+                                </option>
+
+                                <option value="B.Tech">
+                                    B.Tech
+                                </option>
+
+                                <option value="B.Sc">
+                                    B.Sc
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="MCA">
+                                    MCA
+                                </option>
+
+                                <option value="M.Tech">
+                                    M.Tech
+                                </option>
+
+                            </select>
+
+                            <small
+                                id="courseError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Department -->
+
+                        <div class="col-md-5">
+
+                            <label for="department" class="form-label">
+                                Department <span>*</span>
+                            </label>
+
+                            <select
+                                id="department"
+                                class="form-select">
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="AI & DS">
+                                    Artificial Intelligence & Data Science
+                                </option>
+
+                                <option value="CSE">
+                                    Computer Science Engineering
+                                </option>
+
+                                <option value="ECE">
+                                    Electronics & Communication Engineering
+                                </option>
+
+                                <option value="EEE">
+                                    Electrical & Electronics Engineering
+                                </option>
+
+                                <option value="MECH">
+                                    Mechanical Engineering
+                                </option>
+
+                            </select>
+
+                            <small
+                                id="departmentError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Year -->
+
+                        <div class="col-md-3">
+
+                            <label for="year" class="form-label">
+                                Year <span>*</span>
+                            </label>
+
+                            <select
+                                id="year"
+                                class="form-select">
+
+                                <option value="">
+                                    Select Year
+                                </option>
+
+                                <option value="1st Year">
+                                    1st Year
+                                </option>
+
+                                <option value="2nd Year">
+                                    2nd Year
+                                </option>
+
+                                <option value="3rd Year">
+                                    3rd Year
+                                </option>
+
+                                <option value="4th Year">
+                                    4th Year
+                                </option>
+
+                            </select>
+
+                            <small
+                                id="yearError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         ADDRESS
+                    ========================== -->
+
+                    <h5 class="section-title mt-5">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        Address Details
+
+                    </h5>
+
+
+                    <div class="row g-3">
+
+                        <!-- Address -->
+
+                        <div class="col-12">
+
+                            <label for="address" class="form-label">
+                                Address <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="address"
+                                class="form-control"
+                                rows="3"
+                                maxlength="200"
+                                placeholder="Enter complete address"></textarea>
+
+                            <div class="d-flex justify-content-between">
+
+                                <small
+                                    id="addressError"
+                                    class="error-message">
+                                </small>
+
+                                <small class="text-muted">
+
+                                    <span id="charCount">0</span>/200
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- City -->
+
+                        <div class="col-md-4">
+
+                            <label for="city" class="form-label">
+                                City <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                class="form-control"
+                                placeholder="Enter city">
+
+                            <small
+                                id="cityError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- State -->
+
+                        <div class="col-md-4">
+
+                            <label for="state" class="form-label">
+                                State <span>*</span>
+                            </label>
+
+                            <select
+                                id="state"
+                                class="form-select">
+
+                                <option value="">
+                                    Select State
+                                </option>
+
+                                <option value="Tamil Nadu">
+                                    Tamil Nadu
+                                </option>
+
+                                <option value="Andhra Pradesh">
+                                    Andhra Pradesh
+                                </option>
+
+                                <option value="Telangana">
+                                    Telangana
+                                </option>
+
+                                <option value="Karnataka">
+                                    Karnataka
+                                </option>
+
+                                <option value="Kerala">
+                                    Kerala
+                                </option>
+
+                            </select>
+
+                            <small
+                                id="stateError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Pincode -->
+
+                        <div class="col-md-4">
+
+                            <label for="pincode" class="form-label">
+                                Pincode <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pincode"
+                                class="form-control"
+                                placeholder="6 digit pincode"
+                                maxlength="6">
+
+                            <small
+                                id="pincodeError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         SKILLS
+                    ========================== -->
+
+                    <h5 class="section-title mt-5">
+
+                        <i class="bi bi-code-slash"></i>
+
+                        Skills
+
+                    </h5>
+
+
+                    <div class="skills-box">
+
+                        <div class="form-check form-check-inline">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="skills"
+                                value="HTML"
+                                id="html">
+
+                            <label
+                                class="form-check-label"
+                                for="html">
+                                HTML
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="skills"
+                                value="CSS"
+                                id="css">
+
+                            <label
+                                class="form-check-label"
+                                for="css">
+                                CSS
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="skills"
+                                value="JavaScript"
+                                id="javascript">
+
+                            <label
+                                class="form-check-label"
+                                for="javascript">
+                                JavaScript
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="skills"
+                                value="Java"
+                                id="java">
+
+                            <label
+                                class="form-check-label"
+                                for="java">
+                                Java
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="skills"
+                                value="Python"
+                                id="python">
+
+                            <label
+                                class="form-check-label"
+                                for="python">
+                                Python
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         PASSWORD
+                    ========================== -->
+
+                    <h5 class="section-title mt-5">
+
+                        <i class="bi bi-shield-lock-fill"></i>
+
+                        Account Security
+
+                    </h5>
+
+
+                    <div class="row g-3">
+
+                        <!-- Password -->
+
+                        <div class="col-md-6">
+
+                            <label for="password" class="form-label">
+                                Password <span>*</span>
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                class="form-control"
+                                placeholder="Minimum 6 characters">
+
+                            <small
+                                id="passwordError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Confirm Password -->
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="confirmPassword"
+                                class="form-label">
+
+                                Confirm Password <span>*</span>
+
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                class="form-control"
+                                placeholder="Re-enter password">
+
+                            <small
+                                id="confirmPasswordError"
+                                class="error-message">
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         TERMS
+                    ========================== -->
+
+                    <div class="terms-box mt-4">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="terms">
+
+                            <label
+                                class="form-check-label"
+                                for="terms">
+
+                                I agree to the Terms and Conditions
+                                <span>*</span>
+
+                            </label>
+
+                        </div>
+
+                        <small
+                            id="termsError"
+                            class="error-message">
+                        </small>
+
+                    </div>
+
+
+                    <!-- =========================
+                         BUTTONS
+                    ========================== -->
+
+                    <div class="button-section text-center mt-4">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-lg">
+
+                            <i class="bi bi-person-check-fill"></i>
+
+                            Register Student
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="resetBtn"
+                            class="btn btn-outline-secondary btn-lg ms-2">
+
+                            <i class="bi bi-arrow-counterclockwise"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =========================
+                     SUCCESS MESSAGE
+                ========================== -->
+
+                <div
+                    id="successMessage"
+                    class="alert alert-success text-center mt-4"
+                    style="display:none;">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <strong>
+                        Registration Successful!
+                    </strong>
+
+                    <p class="mb-0">
+                        Student has been registered successfully.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             REGISTERED STUDENTS
+        ========================== -->
+
+        <div class="students-card mt-5">
+
+            <div class="students-header">
+
+                <div>
+
+                    <h3>
+                        <i class="bi bi-people-fill"></i>
+                        Registered Students
+                    </h3>
+
+                    <p class="mb-0">
+                        All registered student applications
+                    </p>
+
+                </div>
+
+
+                <div class="student-count">
+
+                    <span id="studentCount">
+                        0
+                    </span>
+
+                    <small>
+                        Students
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="row mt-4 mb-3">
+
+                <div class="col-md-6">
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchStudent"
+                            class="form-control"
+                            placeholder="Search by name or student ID">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Table -->
+
+            <div class="table-responsive">
+
+                <table
+                    class="table table-hover align-middle"
+                    id="studentTable">
+
+                    <thead class="table-primary">
+
+                        <tr>
+
+                            <th>S.No</th>
+
+                            <th>Student ID</th>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Phone</th>
+
+                            <th>Course</th>
+
+                            <th>Department</th>
+
+                            <th>Year</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Empty Message -->
+
+            <div
+                id="emptyMessage"
+                class="empty-message">
+
+                <i class="bi bi-person-x"></i>
+
+                <h5>
+                    No students registered yet
+                </h5>
+
+                <p>
+                    Register the first student using the form above.
+                </p>
+
+            </div>
+
+
+            <!-- Clear All -->
+
+            <div
+                class="text-end mt-3"
+                id="clearAllContainer"
+                style="display:none;">
+
+                <button
+                    type="button"
+                    id="clearAllBtn"
+                    class="btn btn-danger">
+
+                    <i class="bi bi-trash3"></i>
+
+                    Clear All Students
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         jQuery
+    ========================== -->
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+
+
+    <!-- =========================
+         Bootstrap JS
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- =========================
+         CUSTOM JS
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

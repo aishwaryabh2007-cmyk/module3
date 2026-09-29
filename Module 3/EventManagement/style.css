@@ -1,0 +1,731 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #333;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #ff6b6b,
+        #f06595
+    );
+
+    color: white;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.header-content h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.header-content p {
+
+    font-size: 16px;
+
+    opacity: 0.95;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    background: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 15px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+nav a {
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+
+    color: #f06595;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+
+    padding: 55px 0;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+
+    font-size: 30px;
+
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+
+    color: #777;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-area {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.search-area input,
+.search-area select {
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.search-area input {
+
+    flex: 1;
+}
+
+.search-area select {
+
+    width: 220px;
+}
+
+.search-area input:focus,
+.search-area select:focus {
+
+    border-color: #f06595;
+
+    box-shadow:
+        0 0 5px rgba(240, 101, 149, 0.3);
+}
+
+
+/* =========================
+   EVENT CONTAINER
+========================= */
+
+.event-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Event top */
+
+.event-top {
+
+    padding: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #ff6b6b,
+        #f06595
+    );
+
+    color: white;
+}
+
+.event-top h3 {
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.category {
+
+    display: inline-block;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+}
+
+
+/* Event body */
+
+.event-body {
+
+    padding: 22px;
+}
+
+.event-body p {
+
+    color: #666;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.event-body strong {
+
+    color: #333;
+}
+
+.event-register-btn {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #f06595;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition: 0.3s;
+}
+
+.event-register-btn:hover {
+
+    background: #d94c7c;
+}
+
+
+/* =========================
+   FORM BOX
+========================= */
+
+.form-box {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #f06595;
+
+    box-shadow:
+        0 0 5px rgba(240, 101, 149, 0.3);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.form-group small,
+.terms small {
+
+    display: block;
+
+    color: #dc3545;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+
+    margin: 20px 0;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.buttons button {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.register-btn {
+
+    background: #f06595;
+
+    color: white;
+}
+
+.register-btn:hover {
+
+    background: #d94c7c;
+}
+
+.reset-btn {
+
+    background: #e9ecef;
+
+    color: #333;
+}
+
+.reset-btn:hover {
+
+    background: #d6d8db;
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+#successMessage {
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.participant-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.participant-header h3 {
+
+    font-size: 18px;
+}
+
+.participant-header span {
+
+    color: #f06595;
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-btn {
+
+    border: none;
+
+    background: #dc3545;
+
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.clear-btn:hover {
+
+    background: #b02a37;
+}
+
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.table-container {
+
+    overflow-x: auto;
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+th {
+
+    background: #f06595;
+
+    color: white;
+
+    padding: 12px;
+
+    text-align: left;
+}
+
+td {
+
+    padding: 12px;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+tr:hover {
+
+    background: #fff5f8;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-btn {
+
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+
+    background: #b02a37;
+}
+
+
+/* =========================
+   NO DATA
+========================= */
+
+.no-data {
+
+    text-align: center;
+
+    color: #777;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+footer p {
+
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .event-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .header-content h1 {
+
+        font-size: 28px;
+    }
+
+    nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    .search-area {
+
+        flex-direction: column;
+    }
+
+    .search-area select {
+
+        width: 100%;
+    }
+
+    .event-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+
+        flex-direction: column;
+    }
+
+    .participant-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}

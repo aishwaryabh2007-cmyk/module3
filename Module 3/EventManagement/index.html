@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Event Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <h1>🎉 Event Management System</h1>
+
+            <p>
+                Plan, manage and register for upcoming events
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <a href="#events">Events</a>
+
+        <a href="#registration">Register</a>
+
+        <a href="#participants">Participants</a>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= EVENT SECTION ================= -->
+
+        <section id="events">
+
+            <div class="section-heading">
+
+                <h2>Upcoming Events</h2>
+
+                <p>
+                    Explore our upcoming events and register now.
+                </p>
+
+            </div>
+
+
+            <!-- Search and Filter -->
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    id="searchEvent"
+                    placeholder="Search event..."
+                >
+
+                <select id="categoryFilter">
+
+                    <option value="All">
+                        All Categories
+                    </option>
+
+                    <option value="Technology">
+                        Technology
+                    </option>
+
+                    <option value="Cultural">
+                        Cultural
+                    </option>
+
+                    <option value="Sports">
+                        Sports
+                    </option>
+
+                    <option value="Workshop">
+                        Workshop
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Event Cards -->
+
+            <div
+                id="eventContainer"
+                class="event-container">
+            </div>
+
+        </section>
+
+
+        <!-- ================= REGISTRATION ================= -->
+
+        <section id="registration">
+
+            <div class="section-heading">
+
+                <h2>Event Registration</h2>
+
+                <p>
+                    Register for an event by entering your details.
+                </p>
+
+            </div>
+
+
+            <div class="form-box">
+
+                <form id="eventForm">
+
+
+                    <!-- Participant Name -->
+
+                    <div class="form-group">
+
+                        <label for="participantName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="participantName"
+                            placeholder="Enter your full name"
+                        >
+
+                        <small id="nameError"></small>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="participantEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="participantEmail"
+                            placeholder="Enter your email"
+                        >
+
+                        <small id="emailError"></small>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label for="participantPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="participantPhone"
+                            maxlength="10"
+                            placeholder="Enter 10-digit phone number"
+                        >
+
+                        <small id="phoneError"></small>
+
+                    </div>
+
+
+                    <!-- Event -->
+
+                    <div class="form-group">
+
+                        <label for="eventSelect">
+                            Select Event
+                        </label>
+
+                        <select id="eventSelect">
+
+                            <option value="">
+                                Select an event
+                            </option>
+
+                        </select>
+
+                        <small id="eventError"></small>
+
+                    </div>
+
+
+                    <!-- Ticket Type -->
+
+                    <div class="form-group">
+
+                        <label for="ticketType">
+                            Ticket Type
+                        </label>
+
+                        <select id="ticketType">
+
+                            <option value="">
+                                Select ticket type
+                            </option>
+
+                            <option value="Regular">
+                                Regular
+                            </option>
+
+                            <option value="VIP">
+                                VIP
+                            </option>
+
+                            <option value="Student">
+                                Student
+                            </option>
+
+                        </select>
+
+                        <small id="ticketError"></small>
+
+                    </div>
+
+
+                    <!-- Number of Tickets -->
+
+                    <div class="form-group">
+
+                        <label for="tickets">
+                            Number of Tickets
+                        </label>
+
+                        <input
+                            type="number"
+                            id="tickets"
+                            min="1"
+                            max="5"
+                            value="1"
+                        >
+
+                        <small id="ticketsError"></small>
+
+                    </div>
+
+
+                    <!-- Message -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Additional Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="4"
+                            placeholder="Enter any additional requirements..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                            >
+
+                            I agree to the event terms and conditions.
+
+                        </label>
+
+                        <small id="termsError"></small>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="buttons">
+
+                        <button
+                            type="submit"
+                            class="register-btn">
+
+                            Register Now
+
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="reset-btn">
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+
+                    <div id="successMessage"></div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PARTICIPANTS ================= -->
+
+        <section id="participants">
+
+            <div class="section-heading">
+
+                <h2>Registered Participants</h2>
+
+                <p>
+                    View the participants registered for events.
+                </p>
+
+            </div>
+
+
+            <div class="table-box">
+
+                <div class="participant-header">
+
+                    <h3>
+                        Total Participants:
+                        <span id="participantCount">0</span>
+                    </h3>
+
+                    <button
+                        id="clearParticipants"
+                        class="clear-btn">
+
+                        Clear All
+
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>S.No</th>
+
+                                <th>Name</th>
+
+                                <th>Email</th>
+
+                                <th>Phone</th>
+
+                                <th>Event</th>
+
+                                <th>Ticket</th>
+
+                                <th>Tickets</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="participantTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Event Management System |
+            HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
